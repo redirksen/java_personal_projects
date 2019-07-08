@@ -1,11 +1,7 @@
 package pattern_maker;
 
 import java.awt.Color;
-import java.io.File;
-import java.io.IOException;
 import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
@@ -17,19 +13,11 @@ public class MatchDemo {
 		PossibleColors possibleColors = new PossibleColors();
 		List<ColorDetail> choices = possibleColors.getColors();
 		Set<ColorDetail> neededColors = new LinkedHashSet<ColorDetail>();
-
+		UserInput input = new UserInput();
 		// pulls in image
 
-		BufferedImage img = null;
-		try {
-			img = ImageIO.read(new File("/Users/rebeccadirksen/Pictures/WhiteMage.jpg"));
-
-			System.out.println("Reading complete.");
-		} catch (IOException e) {
-
-			System.out.println(e);
-		}
-
+		BufferedImage img = input.importImage();
+		
 		// runs through the image
 		int w = img.getWidth();
 		int h = img.getHeight();
