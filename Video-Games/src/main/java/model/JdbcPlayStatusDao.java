@@ -20,7 +20,7 @@ public class JdbcPlayStatusDao {
 	}
 
 	// update beaten/unplayed
-	public void updateBeaten(int id, String newGamesStatus) {
+	public void updateStatus(int id, String newGamesStatus) {
 
 	}
 

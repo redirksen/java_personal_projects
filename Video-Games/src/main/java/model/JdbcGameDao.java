@@ -31,6 +31,11 @@ public class JdbcGameDao {
 		return null;
 	}
 
+	// make a list of games by series
+	public List<Game> getSeriesGames(int seriesId) {
+		return null;
+	}
+
 	// detail of game
 	public Game getSingleGame(int gameId) {
 		return null;

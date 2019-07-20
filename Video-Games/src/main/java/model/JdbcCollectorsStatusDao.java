@@ -20,7 +20,7 @@ public class JdbcCollectorsStatusDao {
 	}
 
 	// update manual
-	public void updateHasManual(String hasManual) {
+	public void updateHasManual(int id, String hasManual) {
 
 	}
 
