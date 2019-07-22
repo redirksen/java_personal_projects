@@ -23,7 +23,7 @@ public class JdbcPlayStatusDaoTest extends DAOIntegrationTest {
 		testGameSystem.setSystemName("Test System");
 		;
 
-		String sqlInsertGameSystem = "INSERT INTO series (system_id, system_name)" + "VALUES (?, ?)";
+		String sqlInsertGameSystem = "INSERT INTO game_system (system_id, system_name)" + "VALUES (?, ?)";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(this.getDataSource());
 		jdbcTemplate.update(sqlInsertGameSystem, testGameSystem.getSystemId(), testGameSystem.getSystemName());
