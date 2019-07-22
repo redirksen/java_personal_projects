@@ -2,7 +2,7 @@ package model;
 
 public class Compilation {
 	private int compilationId;
-	private int compilationName;
+	private String compilationName;
 
 	public int getCompilationId() {
 		return compilationId;
@@ -12,12 +12,12 @@ public class Compilation {
 		this.compilationId = compilationId;
 	}
 
-	public int getCompilationName() {
+	public String getCompilationName() {
 		return compilationName;
 	}
 
-	public void setCompilationName(int compilationName) {
-		this.compilationName = compilationName;
+	public void setCompilationName(String string) {
+		this.compilationName = string;
 	}
 
 }

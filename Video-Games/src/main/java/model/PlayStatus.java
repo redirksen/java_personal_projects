@@ -1,7 +1,6 @@
 package model;
 
 public class PlayStatus {
-
 	private int gameId;
 	private String status;
 	private int trophiesTotal;

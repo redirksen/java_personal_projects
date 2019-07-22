@@ -4,6 +4,7 @@ public class Game {
 
 	private int gameId;
 	private String gameName;
+	private int gameSystem;
 	private int compilationId;
 	private int seriesId;
 	private String notes;
@@ -22,6 +23,14 @@ public class Game {
 
 	public void setGameName(String gameName) {
 		this.gameName = gameName;
+	}
+
+	public int getGameSystem() {
+		return gameSystem;
+	}
+
+	public void setGameSystem(int gameSystem) {
+		this.gameSystem = gameSystem;
 	}
 
 	public int getCompilationId() {

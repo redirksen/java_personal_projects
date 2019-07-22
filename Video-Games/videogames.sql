@@ -19,10 +19,12 @@ CREATE TABLE series(
 CREATE TABLE game(
         game_id SERIAL NOT NULL,
         game_name VARCHAR (120) NOT NULL,
+        game_system_id INT NOT NULL,
         compilation_id INT NOT NULL,
         series_id INT NOT NULL,
         notes VARCHAR (120) NOT NULL,
         CONSTRAINT pk_game_id PRIMARY KEY (game_id),
+        CONSTRAINT fk_game_system_id FOREIGN KEY (game_system_id) REFERENCES game_system,
         CONSTRAINT fk_compilation_id FOREIGN KEY (compilation_id) REFERENCES compilation,
         CONSTRAINT fk_series_id FOREIGN KEY (series_id) REFERENCES series
 );
