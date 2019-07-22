@@ -63,15 +63,15 @@ public class JdbcGameSystemDaoTest extends DAOIntegrationTest {
 
 	// add system
 	@Test
-	public void create_and_read_new_status() {
+	public void create_and_read_new_game_system() {
 
-		GameSystem testPlayStatus = makeGameSystem("Test System");
+		GameSystem testGameSystem = makeGameSystem("Test System");
 
-		dao.addSystem(testPlayStatus);
-		GameSystem savedResult = dao.getSystem(testPlayStatus.getSystemId());
+		dao.addSystem(testGameSystem);
+		GameSystem savedResult = dao.getSystem(testGameSystem.getSystemId());
 
-		assertNotEquals(null, testPlayStatus.getSystemId());
-		assertGameSystemAreEqual(testPlayStatus, savedResult);
+		assertNotEquals(null, testGameSystem.getSystemId());
+		assertGameSystemAreEqual(testGameSystem, savedResult);
 	}
 
 	// helper methods
