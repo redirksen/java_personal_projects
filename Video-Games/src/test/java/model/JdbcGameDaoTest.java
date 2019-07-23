@@ -70,8 +70,8 @@ public class JdbcGameDaoTest extends DAOIntegrationTest {
 	// make list of games
 	@Test
 	public void get_list_of_all_games() {
-		Game testGameSystem = new Game();
-		testGameSystem = makeGame(-1, "Test System", -1, -1, -1, "test game notes");
+		Game testGame = new Game();
+		testGame = makeGame(-1, "Test System", -1, -1, -1, "test game notes");
 
 		List<Game> results = dao.getAllGames();
 
@@ -79,8 +79,7 @@ public class JdbcGameDaoTest extends DAOIntegrationTest {
 		assertEquals(true, results.size() >= 1);
 		boolean matchfound = false;
 		for (Game g : results) {
-			if (g.getGameId() == testGameSystem.getGameId()
-					&& g.getGameName().equalsIgnoreCase(testGameSystem.getGameName())) {
+			if (g.getGameId() == testGame.getGameId() && g.getGameName().equalsIgnoreCase(testGame.getGameName())) {
 				matchfound = true;
 			}
 		}
