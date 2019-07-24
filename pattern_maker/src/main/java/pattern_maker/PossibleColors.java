@@ -7,10 +7,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class PossibleColors {
+	UserInput input = new UserInput();
 	private List<ColorDetail> colors = new ArrayList<ColorDetail>();
 	
 	public PossibleColors() {
-		File inputFile = getInputFileFromUser();
+		File inputFile = input.getInputFileFromUser();
 		try {
 			Scanner fileScanner = new Scanner(inputFile);
 			while(fileScanner.hasNextLine()) { 
@@ -36,21 +37,6 @@ public class PossibleColors {
 		return colors;
 	}
 	
-	@SuppressWarnings("resource")
-	private static File getInputFileFromUser() {
-		Scanner userInput = new Scanner(System.in);
-		//System.out.print("Please enter path to input file >>> ");
-		String path = "/Users/rebeccadirksen/Project_Resources/Perler_Color.csv";
 
-		File inputFile = new File(path);
-		if(inputFile.exists() == false) { // checks for the existence of a file
-			System.out.println(path+" does not exist");
-			System.exit(1); // Ends the program
-		} else if(inputFile.isFile() == false) {
-			System.out.println(path+" is not a file");
-			System.exit(1); // Ends the program
-		}
-		return inputFile;
-	}
 
 }
