@@ -21,15 +21,13 @@ public class JdbcCompilationDaoTest extends DAOIntegrationTest {
 		// create test series
 		Compilation testCompilation = new Compilation();
 		testCompilation.setCompilationId(-1);
-		;
 		testCompilation.setCompilationName("Test Compliation");
-		;
 
 		String sqlInsertCompilation = "INSERT INTO compilation (compilation_id, compilation_name)" + "VALUES (?, ?)";
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate(this.getDataSource());
 		jdbcTemplate.update(sqlInsertCompilation, testCompilation.getCompilationId(),
-				testCompilation.getCompilationId());
+				testCompilation.getCompilationName());
 	}
 
 	@Test
@@ -54,7 +52,7 @@ public class JdbcCompilationDaoTest extends DAOIntegrationTest {
 	@Test
 	public void test_read_from_database() {
 		Compilation testCompilation = new Compilation();
-		testCompilation = makeCompilation(-1, "Test Series");
+		testCompilation = makeCompilation(-1, "Test Compliation");
 		Compilation results = dao.getCompilation(-1);
 		assertNotNull(results);
 		Compilation savedSeries = results;
