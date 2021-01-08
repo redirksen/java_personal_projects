@@ -3,6 +3,10 @@
   <groupId>com.techelevator</groupId>
   <artifactId>perler</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.source>12</maven.compiler.source>
+    <maven.compiler.target>12</maven.compiler.target>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>

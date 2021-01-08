@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 import javax.imageio.ImageIO;
 
-// /Users/rebeccadirksen/Pictures/WhiteMage.jpg
-// /Users/rebeccadirksen/Project_Resources/Perler_Color.csv
+// /Users/becca/Coding_Projects/perler/Pictures/WhiteMage.jpg
+// /Users/becca/Coding_Projects/perler/Perler_Color.csv
+// /Users/becca/Coding_Projects/perler/Created_Patterns/
 
 public class UserInput {
 
@@ -46,4 +47,24 @@ public class UserInput {
 		return inputFile;
 	}
 
+	public String newFileName(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter the name for the new file");
+		String s = scan.next();
+		return s;
+	}
+
+	public String newFileLocation(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter the abosolute path for the new files");
+		String s = scan.next();
+		return s;
+	}
+
+	public Integer pixelSizing(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter 1 or the how many pixels need to skipped to keep a 1:1");
+		int i = scan.nextInt();
+		return i;
+	}
 }
