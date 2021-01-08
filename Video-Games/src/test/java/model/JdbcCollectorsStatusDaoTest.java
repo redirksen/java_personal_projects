@@ -70,7 +70,7 @@ public class JdbcCollectorsStatusDaoTest extends DAOIntegrationTest {
 		testCollectorsStatus.setRegion("USA");
 		testCollectorsStatus.setPhysicalDigital("Physical");
 		testCollectorsStatus.setPurchasedNewUsed("New");
-		testCollectorsStatus.setHasManual("yes");
+		testCollectorsStatus.setHasManual("no");
 		testCollectorsStatus.setCollectors(true);
 		testCollectorsStatus.setEditionName("Test Collectors");
 
@@ -90,7 +90,7 @@ public class JdbcCollectorsStatusDaoTest extends DAOIntegrationTest {
 	@Test
 	public void test_read_from_database() {
 		CollectorsStatus testCollectorsStatus = new CollectorsStatus();
-		testCollectorsStatus = makeCollectorsStatus(-1, -1, "USA", "Physical", "New", "yes", true, "Test Collectors");
+		testCollectorsStatus = makeCollectorsStatus(-1, -1, "USA", "Physical", "New", "no", true, "Test Collectors");
 		CollectorsStatus results = dao.getCollectorsStatus(-1);
 		assertNotNull(results);
 		CollectorsStatus savedCollectorsStatus = results;
@@ -113,7 +113,7 @@ public class JdbcCollectorsStatusDaoTest extends DAOIntegrationTest {
 	@Test
 	public void create_and_read_new_status() {
 
-		CollectorsStatus testCollectorsStatus = makeCollectorsStatus(-1, "USA", "Physical", "New", "yes", true,
+		CollectorsStatus testCollectorsStatus = makeCollectorsStatus(-1, "USA", "Physical", "New", "no", true,
 				"Test Collectors");
 
 		dao.makeCollectorsStatus(testCollectorsStatus);
